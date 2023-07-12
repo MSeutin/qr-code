@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" />
+    <title>QR-Code</title>
+        <!-- <meta http-equiv="refresh" content="60"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Work+Sans:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <img src="./assets/qr-icon-red.png" alt="">
+        <h1>QR Code</h1>
+    </header>
+    <div class="container">
+        <div class="card settings">
+            <h2>Generate QR Code</h2>
+            <div class="form">
+                <h6>Submit URL</h6>
+                <input type="url" 
+                name="url" 
+                id="url"
+                placeholder="https://">
+                <p class="small">QR code will open this URL</p>
+                <fieldset>
+                    <legend>Color</legend>
+                    <input type="radio" name="color" id="black" value="000" checked>
+                    <img src="./assets/sm-black-qr.png" alt="">
+                    <input type="radio" name="color" id="red" value="f00">
+                    <img src="./assets/sm-red-qr.png" alt="">
+                    <input type="radio" name="color" id="green" value="0f0">
+                    <img src="./assets/sm-green-qr.png" alt="">
+                </fieldset>
+                <button class="btn generate-btn">Generate</button>
+              
+            </div>
+        </div>
+        <div class="card result dimmed">
+            <h2>QR Code</h2>
+            <img src="./assets/qrcode.png" 
+            alt="QR code" 
+            class="qr-img">
+            <p>Right Click Image to Save</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
