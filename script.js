@@ -28,6 +28,10 @@ const sendQrCode = (params) => {
 }
 
 generateButton.addEventListener('click', (e) => {
+    if(!urlInput.value){
+        alert("Please enter a URL");
+        return
+    }
     const colorChoice = document.querySelector('input[name="color"]:checked').value;
     const params = {
         data: urlInput.value,
