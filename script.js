@@ -38,5 +38,6 @@ generateButton.addEventListener('click', (e) => {
         size: '150x150',
         color: colorChoice,
     }
+    urlInput.value = ''
     sendQrCode(params)
 })
